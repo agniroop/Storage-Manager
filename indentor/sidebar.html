@@ -1,0 +1,87 @@
+<style type="text/css">
+    .nav {
+  .open>a {
+    background-color: transparent;
+    &:hover {
+      background-color: #000080;
+    }
+    &:focus {
+      background-color: transparent;
+    }
+  }
+}
+li.open {
+    &:hover {
+      before {
+        transition: width .2s ease-in;
+        width: @full-width;
+      }
+    }
+  }
+#sidebar-wrapper {
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  background: #EEEEEE;
+  height: 100%;
+  left: 220px;
+  margin-left: -220px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  transition: all 0.5s ease;
+  width: 16.5%;
+  z-index: 1000;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+.sidebar-nav li a:hover, .sidebar-nav li a:active, .sidebar-nav li a:focus, .sidebar-nav li.open a:hover, .sidebar-nav li.open a:active, .sidebar-nav li.open a:focus {
+  background-color: #000080;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+li{
+    border-bottom: 1px solid;
+    border-color: #C8C8C8;
+    margin-top: -5px;
+    margin-bottom:-5px;
+}
+li.sidebar-brand{
+    font-size: 25px;
+    height: 53px;
+    padding-left: 10px;
+    line-height: 48px;
+    border-bottom: 0px solid;
+    color: #ffffff;
+    padding-top: 5px;
+    background-color: #000080;
+}
+</style>
+<div id="wrapper">
+        <div class="overlay"></div>
+<nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation" style="border-right:1px solid;border-color:#000080;">
+            <ul class="nav sidebar-nav">
+                <li class="sidebar-brand">
+                       PANEL
+                </li>
+                <li>
+                    <a href= "dashboard.php"><i class="fa fa-fw fa-home"></i> Dashboard</a>
+                </li>
+                <li>
+                    <a href="approved_indents.php"><i class="fa fa-fw fa-folder"></i> Approved Indents</a>
+                </li>
+                <li>
+                    <a href="item_page.php"><i class="fa fa-fw fa-file-o"></i> Items</a>
+                </li>
+                <li>
+                    <a href="cancel_indent.php"><i class="fa fa-fw fa-cog"></i> Cancel Indents</a>
+                </li>
+                <li>
+                    <a href="change_password.php"><i class="fa fa-fw fa-twitter"></i> Change Password</a>
+                </li>
+                <li>
+                    <a href="../logout.php"><i class="fa fa-fw fa-dropbox"></i> Logout</a>
+                </li>
+            </ul>
+        </nav>
